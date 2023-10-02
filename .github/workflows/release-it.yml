@@ -14,5 +14,9 @@ jobs:
                   node-version: 18
             - name: Install the dependencies
               run: yarn
+            - name: Setting Repository Details
+              run: |
+                  git config --local user.name 'Priyesh Shrivastava'
+                  git config --local user.email 'priyesh.zero@gmail.com'
             - name: Create a release
               run: yarn release
