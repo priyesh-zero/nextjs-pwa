@@ -6,7 +6,9 @@
         "tagAnnotation": "🔖 RC - v${version}"
     },
     "github": {
-        "release": false
+        "release": true,
+        "releaseName": "v${version}",
+        "releaseNotes": null
     },
     "npm": {
         "publish": false
