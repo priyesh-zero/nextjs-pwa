@@ -1,0 +1,60 @@
+{
+    "git": {
+        "commitMessage": "chore(release): 🔖 RC - v${version} [skip ci]",
+        "tagName": "v${version}",
+        "tagAnnotation": "🔖 RC - v${version}"
+    },
+    "github": {
+        "release": false
+    },
+    "npm": {
+        "publish": false
+    },
+    "plugins": {
+        "@release-it/conventional-changelog": {
+            "preset": {
+                "name": "conventionalcommits",
+                "types": [
+                    {
+                        "type": "feat",
+                        "section": "✨ Features"
+                    },
+                    {
+                        "type": "fix",
+                        "section": "🐛 Bug Fixes"
+                    },
+                    {
+                        "type": "chore",
+                        "hidden": true
+                    },
+                    {
+                        "type": "docs",
+                        "section": "📚 Documentation"
+                    },
+                    {
+                        "type": "style",
+                        "section": "💎 UI & Styling"
+                    },
+                    {
+                        "type": "refactor",
+                        "section": "⚙️  Refactor"
+                    },
+                    {
+                        "type": "perf",
+                        "section": "🚀 Performance Improvements"
+                    },
+                    {
+                        "type": "test",
+                        "hidden": true
+                    }
+                ],
+                "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commits/{{hash}}",
+                "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/commits/tag/{{currentTag}}",
+                "issueUrlFormat": "https://heady.atlassian.net/browse/{{id}}",
+                "issuePrefixes": ["#", "KA-", "ka-"]
+            },
+            "infile": "CHANGELOG.md",
+            "header": "# Changelog"
+        }
+    }
+}
