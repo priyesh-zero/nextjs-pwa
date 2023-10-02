@@ -1,6 +1,7 @@
 {
     "git": {
         "commitMessage": "chore(release): 🔖 RC - v${version} [skip ci]",
+        "commitArgs": ["--no-verify"],
         "tagName": "v${version}",
         "tagAnnotation": "🔖 RC - v${version}"
     },
