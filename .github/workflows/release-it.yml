@@ -22,3 +22,5 @@ jobs:
                   git config --local user.email 'priyesh.zero@gmail.com'
             - name: Create a release
               run: yarn release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
