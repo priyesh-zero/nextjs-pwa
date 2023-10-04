@@ -1,0 +1,31 @@
+name: Release Action
+run-name: ${{ github.actor }} has created a new release 🚀
+
+on:
+    pull_request:
+        types:
+            - closed
+        branches:
+            - 'develop'
+permissions:
+    contents: write
+
+jobs:
+    release:
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Check out the repository to the runner
+              uses: actions/checkout@v4
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - name: Install the dependencies
+              run: yarn
+            - name: Setting Repository Details
+              run: |
+                  git config --local user.name 'Priyesh Shrivastava'
+                  git config --local user.email 'priyesh.zero@gmail.com'
+            - name: Create a release
+              run: yarn release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
