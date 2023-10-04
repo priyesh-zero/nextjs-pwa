@@ -1,6 +1,6 @@
 {
     "name": "nextjs-pwa",
-    "version": "0.0.3",
+    "version": "0.0.0",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -9,7 +9,7 @@
         "lint": "next lint",
         "prepare": "husky install",
         "postinstall": "yarn next telemetry disable",
-        "prettier": "prettier --loglevel warn --write --ignore-path .gitignore --ignore-unknown",
+        "prettier": "prettier --log-level warn --write --ignore-path .gitignore --ignore-unknown",
         "release": "release-it --ci"
     },
     "dependencies": {

@@ -1,7 +1,12 @@
 name: Release Action
 run-name: ${{ github.actor }} has created a new release 🚀
 
-on: [push]
+on:
+    pull_request:
+        types:
+            - closed
+        branches:
+            - 'develop'
 permissions:
     contents: write
 
