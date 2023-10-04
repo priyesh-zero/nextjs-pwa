@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.0.3 (2023-10-04)
+
+
+### 🐛 Bug Fixes
+
+* **release-it:** 🔐 Adding Github Token as ENV ([e0133d0](https://github.com/priyesh-zero/nextjs-pwa/commits/e0133d02bd9654bcbf46ea4ca1aa25ca98e29dc0))
+
 ## 0.0.2 (2023-10-02)
 
 
